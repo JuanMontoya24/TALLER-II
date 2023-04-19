@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ventas de Productos</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <header class="container">
+    <div class="text-center">
+      <img class="img-fluid width: 100%" src="image/portada.png" alt="">
+    </div>
+      <nav class="">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Actividad 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Taller2A1.html">Actividad 2</a>
+            </li>
+        </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Ventas de Productos</h1>
+    <form>
+      <div class="form-group">
+        <label for="Producto">Producto</label>
+        <input type="text" class="form-control" id="producto" placeholder="Ingrese el nombre del producto">
+      </div>
+      <div class="form-group">
+        <label for="Valor">Cantidad</label>
+        <input type="number" class="form-control" id="cantidad" placeholder="Ingrese la cantidad">
+      </div>
+      <div class="form-group">
+        <label for="valor">Valor</label>
+        <input type="number" class="form-control" id="valor" placeholder="Ingrese el valor del producto">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="agregarVenta()">Agregar Venta</button>
+    </form>
+    <hr>
+    <h2>Ventas Realizadas</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Valor Unitario</th>
+          <th>Valor Total</th>
+        </tr>
+      </thead>
+      <tbody id="tablaVentas">
+      </tbody>
+    </table>
+    <h3>Valor Total a Pagar: <span id="valorTotal"></span></h3>
+    <button type="button" class="btn btn-primary" onclick="actualizarValorTotal()">Calcular</button>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
